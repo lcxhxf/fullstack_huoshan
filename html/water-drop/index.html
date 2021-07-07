@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #cade01;
+        }
+        .droplet{
+            width: 170px;
+            height: 190px;
+            background-color: #efea63;
+            border-radius: 50%;
+            box-shadow: inset 6px 42px 20px #8ad000, 
+                        inset 18px 89px 12px #dce72c, 
+                        12px 18px 17px #83c100;
+            position: relative;
+        }
+        .light-t{
+            width: 10px;
+            height: 40px;
+            border-radius: 50%;
+            background: #fff;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            transform: rotate(40deg);
+        }
+        .light-b{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #fff;
+            position: absolute;
+            top: 65px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="droplet">
+            <div class="light-t"></div>
+            <div class="light-b"></div>
+        </div>
+    </div>
+</body>
+</html>
