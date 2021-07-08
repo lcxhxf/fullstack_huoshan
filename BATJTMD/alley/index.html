@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script>
+    //宽度 window.innerwidth
+    //html 元素 document.documentElement
+    //font-size style.foneSize
+    // 匿名函数
+    (function(){
+        // console.log('动态设置一下html的字体大小');
+        let winWidth = window.innerWidth,
+        oHTML = document.documentElement;
+        // console.log(winWidth,oHTML)
+        oHTML.style.fontSize = `${winWidth / 10}px`;
+        //动态设置一下html的字体大小
+    })()
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .row{
+            display: flex;
+        }
+        .col{
+            background: pink;
+        }
+        .col:first-child{
+            background: green;
+        }
+        .col-1{width: 1rem;}
+        .col-2{width: 2rem;}
+        .col-3{width: 3rem;}
+        .col-4{width: 4rem;}
+        .col-5{width: 5rem;}
+        .col-6{width: 6rem;}
+        .col-7{width: 7rem;}
+    </style>
+</head>
+<body>
+    <!-- 3-7分 flex:3:7 30%  -->
+    <div class="row">
+        <div class="col col-3">1</div>
+        <div class="col col-7">2</div>
+    </div>
+    <div class="row">
+        <div class="col col-4">3</div>
+        <div class="col col-6">4</div>
+    </div>
+</body>
+</html>
