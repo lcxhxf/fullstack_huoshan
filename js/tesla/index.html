@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      id="car"
+      src="https://static-assets.tesla.cn/configurator/compositor?&options=$MTX10,$PPSW,$WX20,$ICW00&view=FRONT34&model=mx&size=1920&bkba_opt=1&version=v0027d202107081203&crop=1300,600,300,230&version=v0027d202107081203"
+      alt=""
+    />
+
+    <select id="color_input">
+      <option value="white">白色</option>
+      <option value="black">黑色</option>
+      <option value="silver">银色</option>
+      <option value="blue">蓝色</option>
+      <option value="red">红色</option>
+    </select>
+    <script>
+      //流程代码
+      //   const images = {
+      //       "white":"https://static-assets.tesla.cn/configurator/compositor?&options=$MTX10,$PPSW,$WX20,$ICW00&view=FRONT34&model=mx&size=1920&bkba_opt=1&version=v0027d202107081203&crop=1300,600,300,230&version=v0027d202107081203",
+      //       "black":"https://static-assets.tesla.cn/configurator/compositor?&options=$MTX10,$PBSB,$WX20,$ICW00&view=FRONT34&model=mx&size=1920&bkba_opt=1&version=v0027d202107081203&crop=1300,600,300,230&version=v0027d202107081203",
+      //       "silver":"https://static-assets.tesla.cn/configurator/compositor?&options=$MTX10,$PMNG,$WX20,$ICW00&view=FRONT34&model=mx&size=1920&bkba_opt=1&version=v0027d202107081203&crop=1300,600,300,230&version=v0027d202107081203",
+      //       "blue":"https://static-assets.tesla.cn/configurator/compositor?&options=$MTX10,$PPSB,$WX20,$ICW00&view=FRONT34&model=mx&size=1920&bkba_opt=1&version=v0027d202107081203&crop=1300,600,300,230&version=v0027d202107081203",
+      //       "red":"https://static-assets.tesla.cn/configurator/compositor?&options=$MTX10,$PPMR,$WX20,$ICW00&view=FRONT34&model=mx&size=1920&bkba_opt=1&version=v0027d202107081203&crop=1300,600,300,230&version=v0027d202107081203"
+      //   }
+      //     const color_input = document.getElementById('color_input');
+      //     const imgEle = document.getElementById('car');
+      //     color_input.addEventListener('change', function() {
+      //     // console.log(this.value);
+      //     const current_color = this.value;
+      //     imgEle.src = images[current_color];
+      // });
+      class TeslaBuy {
+        constructor() {
+          this.car = null;
+          this.colorInput = null;
+          this.images = {
+            white:
+              "https://static-assets.tesla.cn/configurator/compositor?&options=$MTX10,$PPSW,$WX20,$ICW00&view=FRONT34&model=mx&size=1920&bkba_opt=1&version=v0027d202107081203&crop=1300,600,300,230&version=v0027d202107081203",
+            black:
+              "https://static-assets.tesla.cn/configurator/compositor?&options=$MTX10,$PBSB,$WX20,$ICW00&view=FRONT34&model=mx&size=1920&bkba_opt=1&version=v0027d202107081203&crop=1300,600,300,230&version=v0027d202107081203",
+            silver:
+              "https://static-assets.tesla.cn/configurator/compositor?&options=$MTX10,$PMNG,$WX20,$ICW00&view=FRONT34&model=mx&size=1920&bkba_opt=1&version=v0027d202107081203&crop=1300,600,300,230&version=v0027d202107081203",
+            blue: "https://static-assets.tesla.cn/configurator/compositor?&options=$MTX10,$PPSB,$WX20,$ICW00&view=FRONT34&model=mx&size=1920&bkba_opt=1&version=v0027d202107081203&crop=1300,600,300,230&version=v0027d202107081203",
+            red: "https://static-assets.tesla.cn/configurator/compositor?&options=$MTX10,$PPMR,$WX20,$ICW00&view=FRONT34&model=mx&size=1920&bkba_opt=1&version=v0027d202107081203&crop=1300,600,300,230&version=v0027d202107081203",
+          };
+          //init 方法 对象的方法被调用， this->对象本身
+          this.init();
+        }
+        init() {
+          this.car = document.getElementById("car");
+          this.colorInput = document.getElementById("color_input");
+          this.bindColorChangeEvent();
+        }
+        bindColorChangeEvent() {
+          //bind 可以手动指定一个函数this 指向
+          color_input.addEventListener(
+            "change",
+            this.changeCarColor.bind(this)
+          );
+        }
+        changeCarColor() {
+          console.log(this);
+          //   console.log(this.images);
+          const current_color = this.colorInput.value;
+          this.car.src = this.images[current_color];
+        }
+      }
+      new TeslaBuy();
+    </script>
+  </body>
+</html>
