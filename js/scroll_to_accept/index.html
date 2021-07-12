@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+       min-height: 100vh;
+       display: grid;/*网格*/
+       justify-content: center;
+       align-content: center;
+       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+        line-height: 2;
+        background-color: #ffc600;
+    }
+    .wrapper{
+        width: 400px;
+        height: 80vh;
+        padding: 20px;
+        border: 1px solid black;
+        background: white;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    button.accept {
+        background: #ff0060;
+        color: white;
+        font-size: 1rem;
+        padding: 20px;
+        transition: all 0.2s;
+    }
+    button.accept[disabled] {
+        opacity: 0.1;
+    }
+    .terms-and-condition {
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="terms-and-condition">
+            <p>你是个猪嘛？</p>
+            <p>
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+                专注清单: 番茄钟 & 任务清单
+            </p>
+            <strong class="watch"></strong>
+            <p>
+                提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目
+                提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目
+            </p>
+            <p>
+                提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目
+                提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目
+            </p>
+            <p>
+                提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目
+                提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目
+            </p>
+            <p>
+                提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目
+                提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目提供 App 内购买项目
+            </p>
+        </div>
+        <button class="accept" disabled>Accept</button>
+    </div>
+
+<script>
+(function() {
+    const terms = document.querySelector('.terms-and-condition'),
+    watch = document.querySelector('.watch'),
+    button = document.querySelector('.accept');
+    // console.log(terms);
+    function callback(payload) {
+        console.log(payload);
+        // console.log(payload[0].interSectionRatio);
+        if (payload[0].intersectionRatio == 1) {
+            button.removeAttribute('disabled');
+        }
+    }
+    // 视窗里是否已经出现了它？ 
+    const ob = new IntersectionObserver(callback, {
+        root: terms,
+        threshold: 1
+    });
+    ob.observe(terms.getElementsByTagName('p')[
+        terms.getElementsByTagName('p').length-1]);
+})()
+
+
+
+
+</script>
+</body>
+</html>
