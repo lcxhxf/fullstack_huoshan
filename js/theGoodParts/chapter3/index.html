@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+</head>
+<body>
+<script>
+// let num1 = 1,
+//     num2 = 2.1;
+// console.log(typeof num1);
+// console.log(typeof num2);
+// console.log(num2+0.2);
+// let str ='熊';
+// let str2 ='太峰';
+// console.log(str + str2);
+// console.log(`${str}${str2}`);
+// console.log(`付海剑` + 1);
+// let a; // varibale &a JS 弱类型语言 值的类型未确定 undefined
+// console.log(typeof a); // undefined
+// a = 1;
+// console.log(typeof a);
+
+
+// let b = null;
+// let c = undefined;
+
+// let d = true;
+
+
+// //对象字面量
+// let mm = {
+//     name:'陈喵喵',
+//     hometown:'萍乡',
+//     isSignle:true
+// }
+// console.log(mm);
+
+
+
+var s = "zs";
+s.bar = "ls";
+console.log(s.bar); // 输出 undefined
+
+var obj = {};
+obj.num = 88;  
+console.log(obj.num); // 输出 88  
+
+"zs" === "zs"; // true
+1 === 1; // true
+ 
+[] === []; // false
+(function () {}) === (function () {}); // false
+
+var pet = new String("zs")
+pet.constructor === String; // true
+String("zs").constructor === String; // true
+
+var pet = "zs";
+console.log(pet.length); // 3
+pet === "zs"; // true
+
+var foo = 23;
+foo.bar = "zs"; // 是在临时包装器对象上完成的赋值
+foo.bar; // undefined
+
+var foo = null;
+// foo.bar = "zs"; // Uncaught TypeError: Cannot set property 'bar' of null
+
+// var empty_object = {};
+    
+    var object = {
+        "first_name": "zhang",
+        "last-name": "san"
+    };
+
+var father = {
+  name: "zs",
+  age: "22",
+  son: {
+    first: "ls",
+    second: "cucumber",
+  },
+};
+
+father.name; //"zs"
+father["name"]; //"zs"
+
+father.people; //undefined
+father["people"]; //undefined
+
+let dear = father.people || "none"; //none
+let gender = father.gender; //undefined
+
+var box1={
+    check:'book',
+  }
+  var box2=box1;
+  box1.price='300元';
+  console.log(box1.price);//300元
+  console.log(box2.price);//300元
+
+var x = {},
+y = {},
+z = {};
+x == y; //false
+var a = (b = c = {});
+a === b; //true
+
+var box1={
+    check:'book',
+    checkbox:{
+      check:'pencil',
+      price:'300元'
+    },
+    getPrice:function(){
+      return '250元'
+    }
+  }
+if(typeof Object.beget!=='function'){
+  Object.create=function(o){
+    var F=function(){};
+    F.prototype=o;//使其原型改为传进来的对象
+    return new F();
+  }
+}
+var goodsInfo=Object.create(box1)
+console.log(goodsInfo.check)//'book'
+console.log(goodsInfo.getPrice())//'250元'
+
+// goodsInfo.check = 'Harry';
+console.log(goodsInfo.check);//Harry
+console.log(box1.check);//book
+
+box1.check = 'zs';
+console.log(goodsInfo.check); //zs
+
+typeof box1.check; //"string"
+typeof box1.checkbox; //"object"
+typeof box1.getPrice; //"function"
+
+typeof box1.toString; //'function'
+typeof box1.constructor; //'function'
+
+box1.hasOwnProperty("check"); //true
+box1.hasOwnProperty("getcheck"); //false
+
+
+var box1 = {
+  check: "book",
+  checkbox: {
+    check: "pencil",
+    price: "300元",
+  },
+  getPrice: function () {
+    return "250元";
+  },
+};
+
+for (name in box1) {
+  if (typeof box1[name] !== "function") {
+    console.log(name + ":" + box1[name]);
+    //check:book
+    //checkbox:[object Object]
+  }
+}
+
+
+var box1 = ["book", "pencil", "300元"];
+
+for (let i = 0; i < box1.length; i++) {
+  console.log(box1[i]);
+}
+
+function Play1() {}
+Play1.prototype = {
+  constructor: Play1,
+  name: "proto",
+  sex: "boy",
+  hobby: "coding",
+};
+var Play2 = new Play1();
+Play2.hobby = "打王者";
+console.log(Play2.hobby); //'打王者'
+delete Play2.hobby;
+console.log(Play2.hobby); //'coding'
+
+
+var boxs = {};
+boxs.content = {
+  first_box: "tomato",
+  second_box: "cucumber",
+  third_box: "potato",
+};
+boxs.price = {
+  tomato: "25",
+  cucumber: "15",
+  potato: "10",
+};
+
+</script>
+</body>
+</html>

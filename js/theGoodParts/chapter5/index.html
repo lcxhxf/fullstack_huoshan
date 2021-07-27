@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 定义一个方法,变量以大写开头(称之为构造器)
+        var Object = function (name) {
+            this.name = name;
+        }
+        // 2. 在该构造器的原型上添加2个方法(用于继承)
+        Object.prototype.get_name = function () {
+            console.log(this.name);
+        }
+        Object.prototype.says = function () {
+            console.log(this.saying || '');
+        }
+        // 3. 构造一个实例,他会继承Manmmal的原型
+        var myObject = new Object('cat');
+        // 4. 调用实例上的属性/方法
+        console.log(myObject.name) // => cat
+        myObject.get_name(); // => cat
+        myObject.says(); // => ''
+
+
+
+        // 重复上面的1,2步
+        // 3. 再定义一个构造器
+        var Cat = function (name) {
+            this.name = '大猫';
+            this.saying = '喵喵喵';
+        }
+        // 4. 重置构造器的原型(模拟继承)
+        Cat.prototype = new Object();
+        // 5. 在原型上添加新的方法
+        Cat.prototype.get_name = function () {
+            console.log(this.name);
+        }
+        Cat.prototype.purr = function (n) {
+            console.log(Array.from(new Array(n), () => '呼呼呼').join(''));
+        }
+        // 6. 构造一个实例
+        var myCat = new Cat('我的猫');
+        console.log(myCat.name); // => 大猫
+        myCat.get_name();  // => 大猫
+        myCat.purr(4); // => 呼呼呼~呼呼呼~呼呼呼~呼呼呼~
+        myCat.says(); // => 喵喵喵~
+    
+
+
+    </script>
+</body>
+
+</html>

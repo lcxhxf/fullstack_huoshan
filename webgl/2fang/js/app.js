@@ -16,7 +16,7 @@ window.onload = function() { //一切就绪
         0.1,
         1000    
     )
-    camera.position.set(0,0,0.1);
+    camera.position.set(0,0,3);
 
     renderer = new THREE.WebGLRenderer();
     renderer.setSize(document.body.clientWidth, document.body.clientHeight);

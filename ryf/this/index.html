@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 编译原理 操作系统
+        // 冯诺依曼
+        // 文件 -> 内存 调度者 浏览器 进程
+        // var a = 1; //文件 -> 内存 &a
+        // var b = a; 
+
+        // 对象空间是独立的  o 拿到的是这块地址的引用
+        //看过去和编译发生的不一样
+        // var o = {name:"罗超"};
+        // var d = o;
+        // d.name = '腾讯超';
+        // console.log(o,d);
+
+        // var obj = {
+        //     // function 空间分配呢？ 更特殊
+        //     // 函数 功能的封装 10 行
+        //     // 内部还有再分配空间
+        //     // 堆
+        //     // this
+        //     foo: function(){
+        //         //this  函数运行时候决定
+        //         // 函数的运行一定要有上下文环境
+        //     },
+        //     bar:1
+        // }
+
+        //不同的运行方式 带来不同的结果
+        // var bar = 2;
+        // var foo = obj.foo; //函数的地址 &
+        // obj.foo();// context(环境) 
+        // foo();// 全局
+
+
+    </script>
+    <script src="./1.js"></script>
+</body>
+</html>

@@ -14,3 +14,10 @@
             rem html fontSize
                 《-在所有的css之前决定 立即执行函数
                     《= font-size px
+
+
+
+1.大厂的设计稿750
+    设计师把页面画出来，px
+    手机retina屏 1px != 1 csspx
+2. 10rem = 750

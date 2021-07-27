@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //JS 单线程语言
+        //JS 异步的语言
+        // setTimeout(() => {
+        //     console.log('在忙');
+        // }, 2000)
+        // console.log('hello world');
+
+
+        // const p = new Promise((resolve, reject) => {
+        //     console.log('在忙');
+        //     setTimeout(() => {
+        //         resolve()                
+        //     }, 2000)
+        // })
+        // // console.log('hello world');
+        // p.then(() => {
+        //     console.log('hello world');
+        // })
+
+
+        // const p = new Promise((resolve, reject) => {
+        //     console.log('在忙');
+        //     console.log('在忙');
+        //     console.log('在忙');
+        //     console.log('在忙');
+        //     setTimeout(() => {
+        //         // resolve({data: '1231'})
+        //         reject('pig')
+        //     }, 2000)
+        // })
+        // p.then((res) => {
+        //     console.log(res);
+        // })
+        // .catch((msg) => {
+        //     console.log(msg);
+        // })
+        // dns 查找 <- 本地 <- 服务商找 <- 上游 <- 国际
+        // TCP/IP链接 通道
+        const postPromise = fetch('https://api.github.com/users/shunwuyu/repos');
+        const ryfPromise = fetch('https://api.github.com/users/ruanyf/repos')
+
+        // 数据有点大 .json也是一个promise
+        ryfPromise.then(response => response.json())
+        .then(data => {
+            console.log(data);
+            return postPromise
+        })
+
+        .then(newResponse => newResponse.json())
+        .then(newData => {
+            console.log(newData);
+        })
+        
+        
+    </script>
+</body>
+</html>

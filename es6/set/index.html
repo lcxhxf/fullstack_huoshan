@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 集合
+        const people = new Set();
+        people.add('Wes');
+        people.add('罗超');
+        people.add('lc');
+        people.add('罗超'); //不可加入重复的项
+        for (let person of people) {
+            console.log(person);
+        }
+        const students = new Set(["罗超", "罗国安", "罗子宽"])
+
+        const dogs = new Map();
+        dogs.set("Snickers", 3);
+        dogs.set("Sunny", 2);
+        dogs.set("Huge", 10)
+        
+        //一个数组里的东西不用下标，怎么把下标的值解出来？
+        //es6 解构
+        for(let [key, val] of dogs) {
+            console.log([key, val]);
+        }
+        // for (let item of dogs) {
+        //     console.log(item);
+        // }
+    </script>
+</body>
+</html>
