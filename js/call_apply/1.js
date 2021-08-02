@@ -32,8 +32,18 @@ let foo = {     //要指向的对象
     value:1
 }
 
-function bar(name, age) {
+Function.prototype.call2 = function(content=window) {
+    content.fn = this;
+    let args = [...arguments].slice(1);
+    const result = content.fn(...args);
+    delete content.fn;
+    return result;
+}
+
+function bar(name,age) {
     console.log(name);
     console.log(age);
-    console.log(this.value);
+    // this指向全局 对象的方法被调用时
+    console.log(this.value); //由函数的调用 方式 来决定
 }
+bar.call2(foo, '罗超', 12) 
