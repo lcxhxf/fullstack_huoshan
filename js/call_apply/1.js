@@ -1,0 +1,39 @@
+// // Function 是一个对象
+// // prototype ？ 函数
+// Function.prototype.call2 = function(content=window, this) {
+//     //content 要服务的对象
+
+//     content.fn = this;
+
+//     // console.log('开始写call');
+//     //函数， this 参数
+
+//     let args = [...arguments].slice(1)   // 解决了伪数组问题
+//     let result = content.fn(...args);
+//     return result;
+// }
+
+// let foo = {
+//     value = 1
+// }
+
+// function bar(name, age) {
+//     // this ->
+//     console.log(name);
+//     console.log(age);
+//     console.log(this.value);
+    
+// }
+// //函数既是函数，又是对象
+// console.log(bar.__proto__,'------');
+// bar.call2(foo, name, age);
+
+let foo = {     //要指向的对象
+    value:1
+}
+
+function bar(name, age) {
+    console.log(name);
+    console.log(age);
+    console.log(this.value);
+}
