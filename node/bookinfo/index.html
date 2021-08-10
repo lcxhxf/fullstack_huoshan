@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="" id="keyword">
+        <div id="keyDiv"></div>
+        <div id="Div1"></div>
+    </div>
+    <script>
+        const o = {
+            keyword: 'LOL'
+        }
+        const oIput = document.getElementById('keyword');
+        const oDiv = document.getElementById('keyDiv');
+        const oDiv1 = document.getElementById('Div1')
+        window.onload = function () {
+            oIput.value = o.keyword
+            oDiv.innerText = o.keyword
+            oDiv1.innerText = o.keyword
+            oIput.addEventListener('input', function () {
+                targetWithLog.keyword = this.value
+            })
+        }
+        var handler = {
+            set: function (target, key, value) {
+                console.log(`${key} 被设置为 ${value}`);
+                oDiv.innerText = value
+                oDiv1.innerText = value
+                o[key] = value;
+            }
+        }
+        var targetWithLog = new Proxy(o, handler);
+    </script>
+</body>
+
+</html>
