@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="wrapper">
+       <h2>LOCAL TAPARS</h2>
+       <p></p>
+       <ul class="plates">
+           <li>loading Tapes...</li>
+       </ul>
+       <form class="add-items" name="plate-form" 
+       action="/login" method="post">
+        <input type="text" name="item" placeholder="Item Name" required>
+        <input type="submit" value="+ Add Item">
+        </form>
+   </div> 
+   <script>
+    let plates = [];
+
+    const oForm = document.forms["plate-form"];
+    console.log(oForm);
+    oForm.addEventListener('submit', function(event) {
+        // form 用来收集用户信息的， action get post  
+        event.preventDefault();
+        let text = (this.querySelector('[name=item]')).value;
+        // console.log(text);
+        if (!text.trim()) {
+            alert('请输入内容');
+            return ;
+        }
+        // 如何设计 存到storage 
+        let plate = {
+            text,
+            done: false
+        }
+        plates.push(plate);
+        localStorage.setItem('items', JSON.stringify(plates));
+        this.reset();
+        loadData();
+    })
+
+    function loadData() {
+        let items = localStorage.getItem('items');
+        if(!items) return
+        
+        plates = JSON.parse(items);
+        if(!plates.length) return
+
+        // console.log(typeof plates)
+        document.querySelector('.plates').innerHTML = plates.map(
+            (plate, index) => `
+            <li>
+                <input type="checkbox"
+                data-index="${index}"
+
+                id="item${index}" ${plate.done?'checked':''}/>
+                <label for="item${index}">${plate.text}</label>
+            </li>
+        `).join('')
+    }
+    function toggleDone(e) {
+        if (e.target == 'li' || e.target == 'label') return;
+        console.log(e);
+        const el = e.target;
+        const index = el.dataset.index;
+        console.log(index);
+        plates[index].done = !plates[index].done
+        localStorage.setItem('items', JSON.stringify(plates))
+    }
+    window.onload = function() {
+        loadData();
+        // 点子元素，父元素也会执行事件 事件冒泡
+        const itemList = document.querySelector('.plates');
+        itemList.addEventListener('click', toggleDone);
+    }
+   </script>
+</body>
+</html>
