@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 前端 主动发送请求，拉取数据
+        // 后端 MySQL -> java 数组 JSON include templ <%= posts.forEach%>
+        // 快速且主动的拉取API数据 一般的由后端提供Api，用json-server模拟了一下
+        // fetch拿到二进制流文件，json()化一些它
+        // 跨了端口、协议、域名不一样，就叫跨域
+        const f = fetch('http://localhost:3000/books')
+        const f2 = fetch('http://localhost:3000/publisher');
+
+        (async () => {
+            try{
+                const booksRes = await f;
+                const books = await booksRes.json();
+                console.log(books);
+                const publisherRes = await f2;
+                const publisher = await publisherRes.json()
+            }catch(e) {
+                console.log(e);
+            }
+            
+        })()
+        // console.log(f instanceof Promise);
+        // http://localhost 本地，wesbos.com CROS 跨域
+        // f
+        //     .then(res => res.json())
+        //     .then(res => {
+        //         console.log(res);
+        //     })
+        // const f2 = fetch('http://localhost:3000/publisher')
+        // Promise
+        //     .all([f, f2])
+        //     .then(response => Promise.all(
+        //         response.map(
+        //             res => res.json()
+        //         )
+        //     ))
+        //     .then(responses => {
+        //         console.log(responses);
+        //     })
+        // Promise
+        //     .race([f, f2])
+        //     .then(response => response.json())
+        //     .then(res =>{
+        //         console.log(res)
+        //     })
+        //     .catch(err =>{
+        //         console.log(err)
+        //     })
+    </script>
+</body>
+</html>

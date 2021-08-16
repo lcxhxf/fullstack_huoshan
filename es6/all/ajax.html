@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+<body>
+    <ul id="books"></ul>
+    <script>
+        // fetch 可以主动摘取后端 的数据 主动拉数据
+        // 前后端分离
+        // fetch 以前是怎么通信的
+        let xmlhttp = new XMLHttpRequest();
+        xmlhttp.open('GET', 'http://localhost:3000/publisher', true);
+        // http 路上 异步
+        console.log(xmlhttp.readyState, '||||||||');
+        xmlhttp.send();
+        // 对象的状态改变
+        xmlhttp.onreadystatechange = function() {
+            console.log(xmlhttp.readyState);
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                console.log(typeof xmlhttp.responseText);
+                const books = JSON.parse(xmlhttp.responseText);
+                document.getElementById('books')
+                    .innerHTML = books.map(book =>`
+                        <li>
+                            ID: ${book.id}
+                            Name: ${book.name}
+                        </li>
+                    `).join('')
+            }
+        }
+    </script>
+</body>
+</html>
