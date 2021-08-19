@@ -1,0 +1,12 @@
+{
+  "name": "event_loop",
+  "version": "1.0.0",
+  "description": "- 代码的编写顺序和执行顺序会不一样\r     console.log两个先执行\r - setTimeout promise 都是异步\r - event loop \r     JS是单线程语言\r     执行栈是否会被清空\r     如果有个click事件呢？\r     addEventListener click fn 注册到 event 池里 事件\r     loop 事件池\r     setTimeout宏任务 promise 区别对待的",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

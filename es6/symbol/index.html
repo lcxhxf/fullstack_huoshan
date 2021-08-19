@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //函数 简单数据类型
+        // label 
+        // Symbol 形式上是函数，但是是简单类型
+        const wes = Symbol('wes');
+        const person = Symbol('wes')
+
+        console.log(wes == person); //false symbol是唯一 object
+        console.log(wes, typeof wes);
+        console.log(Symbol() == Symbol()); //false symbol是唯一 object
+
+        const classRoom = {
+            [Symbol('刘全能')]:"刘印",
+            [Symbol('刘全能')]:"刘天昊",
+            "东理faker": "李总",
+            [Symbol()]: "Mr Li",
+            [Symbol()]: "Mr Lang",
+            [Symbol('Mark')]: {grade:50,gender:'male'},
+            [Symbol('olivia')]: {grade:80,gender:'female'},
+            [Symbol('Mark')]: {grade:80,gender:'female'}
+        }
+        const keys = Object.keys(classRoom);
+        console.log(keys);
+        const syms = Object.getOwnPropertySymbols(classRoom);
+        console.log(syms);
+        for (let key of keys) {
+            console.log(classRoom[key]);
+        }
+        for (let sym of syms) {
+            console.log(classRoom[sym]);
+        }
+        const data = [...keys.map(key=>classRoom[key]),
+        ...syms.map(sym => classRoom[sym])]
+        console.log(data);
+
+        console.log('--------');
+        // 对象字面量最根正的遍历API
+        // symbol 可以给对象带来唯一性， 但是它与传统
+        for(const person in classRoom) {
+            console.log(person);
+        }
+    </script>
+</body>
+</html>
