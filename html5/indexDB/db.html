@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexDB 前端数据库</title>
+</head>
+<body>
+<script>
+// var  a = 2;
+// const request = 1;
+// index 索引
+var request = window.indexedDB.open('blogs', 2);
+console.log(request);
+request.onerror = function(event) {
+    console.log('数据库打开报错');
+}
+request.onsuccess = function(event) {
+    db = request.result;
+    // console.log('数据库打开成功');
+    // var objectStore = db.createObjectStore('person', {keypath:'id'});
+}
+request.onupgradeneeded = function() {
+    db = request.result;
+    create();
+    var objectStore;
+    if (!db.objectStoreName.contains('person')) {
+        // 主键 索引就是为了查询更快 doc(id) 详情页 加一个索引
+        // 列表 .get() 20 .skip() limit()
+        // 详情页 /detail?id=121212
+        objectStore = db.createObjectStore('person', {keypath: 'id'});
+        // /search?name=%xiaoLang% name 部首做一个索引
+        objectStore.createIndex('name', 'name', {unique: false});
+        objectStore.createIndex('email', 'email', {unique:true})
+    }
+}
+function create() {
+    // 事物
+    var request = db.transaction(['person'], 'readwrite')
+        .objectStore('person')
+        // .add{id:1, name:}
+}
+</script> 
+</body>
+</html>
