@@ -8,16 +8,14 @@
 /**
  * @param {ListNode} head
  * @return {ListNode}
- *          
  */
- var reverseList = function(head) {     //迭代
-    let prev = null;
-    let curr = head;
-    while(curr) {
-        let next = curr.next;
-        curr.next = prev;
-        prev = curr;
-        curr = next
+ var reverseList = function(head) {
+    if (head == null || head.next == null) {
+        return head;
     }
-    return prev;
+    const newHead = reverseList(head.next);
+    head.next.next = head;
+    head.next = null;
+    return newHead;
 };
+
