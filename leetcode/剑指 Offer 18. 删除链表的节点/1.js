@@ -10,10 +10,10 @@
  * @param {number} val
  * @return {ListNode}
  */
- var deleteNode = function(head, val) {
+ var deleteNode = function(head, val) { //迭代
     if(head.val == val) return head.next;
     let cur = head;
-    while(cur){
+    while(cur.next){
         if(cur.next.val == val){
             cur.next = cur.next.next;
             return head;
