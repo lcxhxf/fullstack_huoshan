@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单例模式</title>
+</head>
+
+<body>
+    <script>
+        // 类是用来实例化的
+        // 只能实例化一次
+        function Singleton(name) {
+            this.name = name;
+            this.instance = null;
+        }
+        // 原型对象
+        Singleton.prototype.say = function () {
+            console.log('罗超猛男啊！');
+        }
+        // Person对象来使用 静态方法
+        Singleton.getInstance = function (name) {
+            // console.log('返回单例对象，独苗');
+            // 如何返回一个实例
+            // 如果生过了，返回之前的那一个
+            if (!this.instance) {
+                this.instance = new Singleton(name);
+            }
+            return this.instance;
+        }
+        // let lc = new Person('罗超');
+        // lc.say();
+        let lc = Person.getInstance('罗超');
+        let zhu = Person.getInstance('猪猪🐖');
+        console.log(lc.name, zhu.name);
+        // let ltt = new Person('刘天瞳');
+        // console.log(ltt instanceof Person);
+        // console.log(ltt.__proto__.constructor == Person);
+    </script>
+</body>
+
+</html>
