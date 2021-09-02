@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #09f;
+            box-shadow: 2px 2px 1px #666;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="弹窗">
+    <script>
+        // 99%的用户是不登录的 先不加在登录框， 性能更好
+        const oBtn = document.querySelector("input");
+        let offset = 20, index = 1;
+        function Modal (pos) {
+            this.offset = pos || 20
+        }
+        Modal.prototype.create = function() {
+            const oDiv = document.createElement('div');
+            oDiv.style.left = (++index) * this.offset + 'px';
+            oDiv.style.top = (++index) * this.offset + 'px';
+            oDiv.innerHTML = index
+            return oDiv;
+
+        }
+        oBtn.addEventListener('click',function() {
+            // 动态加载
+            let modal = new Modal();
+            document.body.appendChild(modal.create());
+        }, false)
+    </script>
+</body>
+</html>

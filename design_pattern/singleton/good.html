@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #09f;
+            box-shadow: 2px 2px 1px #666;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="弹窗1">
+    <input type="button" value="弹窗2">
+    <script>
+        var allBtn = document.querySelectorAll('input'),
+            offset=20, indx=1;
+        function Modal(pos) {
+            this.offset = pos || 20
+            this.hide = false
+        }
+        Modal.prototype.create = function() {
+            this.oDiv = document.createElement('div');
+            var that = this;
+            oDiv.addEventListener('click', function() {
+                that.hide = true;
+                this.style.display = 'none';
+            })
+            oDiv.style.left = (++index) * this.offset + 'px';
+            oDiv.style.top = (++index) * this.offset + 'px';
+            oDiv.innerHTML = index
+            return this.oDiv;
+        }
+        Modal.getInstance = (function() {
+            //闭包空间 不会销毁
+            var ins = null,isExist = null;
+            return function(pos){
+                if (!ins) ins = new Modal(pos);
+                if (!isExist) {
+                    document.body.appendChild(ins.create());
+                    isExist = true;
+                }
+                if (ins && ins.hide) {
+                    ins.oDiv.style.display = 'block';
+                }
+            }
+        })()
+        allBtn[0].addEventListener('click', function() {
+            Modal.getInstance()
+        });
+        allBtn[1].addEventListener('click', function() {
+            Modal.getInstance()
+        })
+    </script>
+</body>
+</html>
