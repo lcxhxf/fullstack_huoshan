@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookie</title>
+</head>
+
+<body>
+    <script>
+        // console.log(document.cookie, '------');
+        const cookieObj = {};
+        const cookieStr = '_ga=GA1.2.576910313.1620918534; passport_csrf_token_default=03af8e9bcc1a7742c55533be52845dcf; passport_csrf_token=03af8e9bcc1a7742c55533be52845dcf; MONITOR_WEB_ID=d3dc0195-4905-4e3a-8d2a-ba4d1ab3a00d; ttcid=a4814ef504934bf18c72e7c85a91b97333; _gid=GA1.2.179973053.1630338089; tt_scid=kqB4ov-yKuQd09o2GQDmRjDoiJVTJWSeyPO7NzvZlh.HMs5SpH-8xMAatVXxTFN84651';
+        const parseCookie = str =>
+            str
+                .split(';')
+                // 变形的
+                .map(v => v.split("="))
+                // 二位数组 编程一个{} 把数组推平的方法
+                .reduce((acc, v) => {
+                    acc[v[0]] = v[1]
+                    return acc
+                }, {})
+        console.log(parseCookie(cookieStr));
+    </script>
+</body>
+
+</html>
