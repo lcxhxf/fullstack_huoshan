@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html5绘图</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/weui/2.4.4/style/weui.min.css">
+    <script src="./1.js" async></script>
+    <script src="./2.js" async></script>
+    <style>
+        #canvas {
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>dffdfdfdffdfd</h1>
+    <script>
+        console.log('阻塞');
+    </script>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOMContentLoaded');
+        })
+    </script>
+    <script>
+        var canvas = document.getElementById('canvas');// 标签对象
+        var context = canvas.getContext('2d'); //平面，webgl 3d 上下文句柄
+
+        context.beginPath();//开始路径
+        // line circle
+        context.arc(200, 200, 20, 0, Math.PI*2, true);
+        context.closePath();//结束路径
+        context.fillStyle = 'rgb(255, 255, 255)';
+        context.fill()
+
+    </script>
+</body>
+</html>
