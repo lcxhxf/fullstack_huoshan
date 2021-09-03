@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滚动后停止练习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            height: 3000px;
+            margin: 0 20px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        window.addEventListener('scroll', function(event) {
+            // console.log(event);
+            // 得到滚动的偏移量 触发太多次
+            // 不是监听滚动事件，而是当事件停止后，执行回调函数
+        }, false);
+        const onScrollStop = callback => {
+            let isScrolling; //闭包空间中 存放定时器的ID
+            window.addEventListener(
+                'scroll',
+                e => {
+                    clearTimeout(isScrolling);
+                    // 频繁滚动时不执行
+                    // if    //最后一次滚动
+                    isScrolling = setTimeout(() => {
+                        callback();
+                    }, 150)
+                }
+            )
+        }
+        onScrollStop(() =>{
+            console.log('The user has stopped scrolling');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 5000px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        // 一秒钟执行一次
+        function callback() {
+            console.log('节流触发了');
+        }
+        //高级函数 返回值或参数也是函数
+        function throttle(cb, delay) {
+            // 闭包 cb delay 单位时间 计时
+            let isScrolling, last//定时器
+
+            return function (args) {
+                this.a = 2;
+                let that = this;//当前作用域
+                let _args = arguments//函数执行的时候 有的 call apply
+                let now = +new Date()
+                if (last && now < last + delay){
+                    clearTimeout(isScrolling);
+                    isScrolling = setTimeout(function() {
+                        last = now; //得到了执行权
+                        cb.apply(that,_args);
+                    }, delay)
+                } else {
+                    last = now
+                    cb.apply(that,_args);//先执行一次
+                }
+            }
+        }
+        window.addEventListener('scroll', throttle(callback, 1000))
+    </script>
+</body>
+</html>
