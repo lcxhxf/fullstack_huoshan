@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代理模式</title>
+</head>
+<body>
+    <img src="https://i.loli.net/2021/09/04/O5FjluAictoeKEn.jpg" origin_src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fa39bac47afb919b7b92f21f80218bae9e128650fb396-o1BXWL_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633315789&t=1748ab897d77d8489acd8dafc21a38e0"alt="">
+    <script>
+        // 图片加载损耗性能 
+        // 菊花图 loading.gif 占位图
+        // 让页面先显示出来
+        window.onload = function() {
+            const oImg = document.querySelector('img');
+            const origin_src = oImg.getAttribute('origin_src');
+            const temImg = document.createElement('img');
+
+            temImg.onload =  function() {
+                oImg.src = origin_src;
+            }
+            
+            temImg.src = origin_src;
+            document.body.appendChild(temImg);
+        }
+    </script>
+</body>
+</html>

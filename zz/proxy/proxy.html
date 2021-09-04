@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // // 占位图
+    // // 先显示占位图
+    // // 派一个代理对象去请求真实的图片地址
+    // // 交给这个对象
+    // var myImage = (function() {
+    //     var imgNode = document.createElement('img');
+    //     document.body.appendChild(imgNode);
+    //     return {
+    //         setSrc: function(src) {
+    //             imgNode.src = src;
+    //         }
+    //     }
+    // })()
+    // var  proxyImage = (function() {
+    //     // 闭合空间
+    //     var img = new Image(); // DOM 代理对象
+    //     img.onload = function() {
+    //         // 设置一下
+    //         // this.src
+    //         myImage.setSrc(this.src);
+    //     }
+    //     return {
+    //         setSrc: function(src) {
+    //             // src 变量 scope
+    //             myImage.setSrc('https://img0.baidu.com/it/u=1654715439,2434661835&fm=26&fmt=auto&gp=0.jpg')
+    //             img.src = src; 
+    //             // console.log(src);
+    //         }
+    //     }
+    // })()
+    // proxyImage.setSrc('https://i.loli.net/2021/09/04/x1dvTGLXlzIs9ng.jpg')
+
+
+
+    // <!-- 1. 代理模式 -->
+    var myImage = (function() {
+        var imgNode = document.createElement('img');
+        document.body.appendChild(imgNode);
+        return {
+            setSrc: function(src) {
+                imgNode.src = src
+            }
+        }
+    })()
+    var proxyImage = (function() {
+        var img = new Image();
+        img.onload = function() {
+            myImage.setSrc(this.src)
+        }
+        // 闭包
+        return {
+            setSrc: function(src) {
+                // 代理对象去做体力活 下载图片
+                myImage.setSrc('https://img0.baidu.com/it/u=1654715439,2434661835&fm=26&fmt=auto&gp=0.jpg')
+                img.src = src;  // 网络进程
+            }
+        }
+    })()
+    // A要显示图片 让代理对象去找
+    proxyImage.setSrc('https://i.loli.net/2021/09/04/x1dvTGLXlzIs9ng.jpg') //代理对象去执行
+    </script>
+</body>
+</html>
