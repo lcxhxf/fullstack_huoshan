@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手风琴</title>
+    <style>
+        .accordion {
+            width: 300px;
+        }
+        .accordion article {
+            cursor: pointer;
+        }
+        .accordion article + article {
+            margin-top: 5px;
+        }
+        .accordion label {
+            display: block;
+            padding: 0 20px;
+            height: 40px;
+            background-color: #f66;
+            cursor: pointer;
+            line-height: 40px;
+            font-size: 16px;
+            color: #fff;
+        }
+        .accordion p {
+            overflow: hidden;
+            max-height: 0;
+            padding: 0 20px;
+            border: 1px solid #f66;
+            border-top: none;
+            border-top-width: 0;
+            transition: all 500ms;
+            line-height: 30px;
+        }
+        .accordion input:nth-child(1):checked ~ article:nth-of-type(1) p,
+        .accordion input:nth-child(1):checked ~ article:nth-of-type(2) p,
+        .accordion input:nth-child(1):checked ~ article:nth-of-type(3) p
+        {
+            border-width: 1px;
+            min-height: 600px;
+        }
+        /* .accordion :nth-child(1) {
+            background-color: green;
+        }
+        .accordion article:nth-of-type(1) {
+            background-color: black;
+        } */
+    </style>
+</head>
+<body>
+    <div class="accordion">
+        <input type="checkbox" id="collapse1" hidden="hidden">
+        <input type="checkbox" id="collapse2" hidden="hidden">
+        <input type="checkbox" id="collapse3" hidden="hidden">
+        <article>
+            <label for="collapse1">列表1</label>
+            <p>内容1</br>内容2</br>内容3</br>内容4</p>
+        </article>
+        <article>
+            <label for="collapse2">列表2</label>
+            <p>内容1</br>内容2</br>内容3</br>内容4</p>
+        </article>
+        <article>
+            <label for="collapse3">列表3</label>
+            <p>内容1</br>内容2</br>内容3</br>内容4</p>
+        </article>
+    </div>
+</body>
+</html>
