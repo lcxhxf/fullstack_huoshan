@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import logo from './logo.svg';
+import ChartDemo from './components/ChartDemo';
 import './App.css';
 
 const Count = () => {
@@ -15,7 +16,8 @@ const Count = () => {
 function App() {
   return (
     <div className="App">
-      <Count/>
+      {/* <Count/> */}
+      <ChartDemo/>
     </div>
   );
 }
