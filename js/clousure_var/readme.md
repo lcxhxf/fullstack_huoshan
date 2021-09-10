@@ -1,0 +1,4 @@
+- 使用立即执行函数，在创建闭包的同时，还可以带来面向对象的新的开发方式
+- return {} 组织方法
+- {} new Object() Class new
+- private 私有属性
