@@ -1,0 +1,17 @@
+{
+  "name": "try-babel",
+  "version": "1.0.0",
+  "description": "- babel\r   js转义\r   es6 -> es5 需要 \r   使用最高级写法，不是最后运行的代码，由babel编译，帮我们生成es5的代码",
+  "main": "1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6"
+  }
+}
