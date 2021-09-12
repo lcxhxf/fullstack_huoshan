@@ -143,9 +143,9 @@ height: 44px;
 
 `
 export const TabItem = styled.div`
-height:100%;
-display:flex;
-flex-direction:row;
-justify-content:center;
-align-item:center;
+  height:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
 `
