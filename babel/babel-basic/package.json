@@ -1,0 +1,16 @@
+{
+  "name": "babel-basic",
+  "version": "1.0.0",
+  "description": "- 源码目录是src\r   dist",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5"
+  }
+}
