@@ -9,13 +9,27 @@ export const initialState = {
 }
 // reducer 函数 state action
 export const reducer = (state, action) => {
+    // console.log(action, '+++++++++');
      switch(action.type) { //做了什么事？
-        case "SEARCH_MOVIES_SUCCESS":
+        case "lllllll":
             return {
                 ...state,
                 loading: false,
                 movies: action.payload
             }
+        case "cccccccc":
+        return {
+            ...state,
+            movies: [],
+            loading: false,
+            errorMessage: action.payload
+        }
+        case "dddddddd":
+        return {
+            ...state,
+            movies: [],
+            loading: true
+        }
         default:
             return state
      }
