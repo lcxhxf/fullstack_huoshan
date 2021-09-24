@@ -1,8 +1,8 @@
 {
-    "presets": ["@babel/preset-env"],
+    "presets": ["@babel/preset-env"],// 预处理
     "plugins": [
       [
-        "@babel/plugin-proposal-decorators", 
+        "@babel/plugin-proposal-decorators", //插件建议装饰器 将实验阶段的东西
         {
           "legacy": true  
         }
