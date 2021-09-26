@@ -1,0 +1,1 @@
+{"version":3,"sources":["common.styl"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA","file":"parcel-demo.f69400ca.css","sourceRoot":"..","sourcesContent":["html,\nbody {\n  height: 100vh;\n  background-color: #ffc0cb;\n}\n"]}
