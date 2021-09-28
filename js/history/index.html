@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./common.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fluffy.html">Fluffy</a></li>
+            <li><a href="socks.html">Socks</a></li>
+            <li><a href="whiskers.html">Whiskers</a></li>
+        </ul>
+        <p class="content">Welcome to Kittens! Home of Fluffy, Socks, and Whiskers. If you're not suffering from a cute
+            overdose within the hour, then you really are a heartless bugger! Now lets look at some cats!</p>
+        <div class="media">
+            <img class="photo" src="http://www.ichong123.com/uploads/2014/08/m1.jpg" alt="Fluffy!">
+        </div>
+        <script>
+            const list = document.querySelector('.nav')
+            list.addEventListener('click', function(event) {
+                event.preventDefault();
+                if (event.target.nodeName == 'A') {
+                    const url = event.target.href;
+                    // console.log(url);
+                    // react-router-dom ajax 动态获取内容
+                    // 其他页面的内容拿过来， DHTML 动态的加载到当前页面上
+                    // route/index.js Switch route
+                    const xhr = new XMLHttpRequest();
+                    xhr.open('GET', url, true)
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState == 4) {
+                            // text/html
+                            const html = xhr.responseText;
+                            const conrentMatches = html.match(/<p class="content">(.+)</)
+                            const content = conrentMatches[1];
+                            const photoMatches = html.match(/<src=">(.+)</)
+                            const photo = photoMatches[1];
+                            const titleMatches = html.match(/<title>(.+)</)
+                            const title = titleMatches[1];
+                            let state = {
+                                content,
+                                photo,
+                                title
+                            }
+                            console.log(state);
+                            document.querySelector('content').innerHTML = content;
+                            document.querySelector('.photo').src = photo;
+                            document.title = title;
+                            
+                        }
+                    }
+                    xhr.send()
+                }
+            }, false)
+            
+        </script>
+
+    </div>
+</body>
+
+</html>
