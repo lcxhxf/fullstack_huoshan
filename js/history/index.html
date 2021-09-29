@@ -50,9 +50,10 @@
                                 title
                             }
                             console.log(state);
-                            document.querySelector('content').innerHTML = content;
+                            document.querySelector('.content').innerHTML = content;
                             document.querySelector('.photo').src = photo;
                             document.title = title;
+                            history.pushState(state, state.title,url)
                             
                         }
                     }
