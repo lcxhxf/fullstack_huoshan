@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Example7 from './Example7'
+import Example9 from './Example9'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Example7 />
+    <Example9 />
   </React.StrictMode>,
   document.getElementById('root')
 );
