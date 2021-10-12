@@ -10,7 +10,7 @@ function useTopicList(tab='all', page=1,limit=20, mdrender=true) {
   )
   .then((res) => {
     console.log(res);
-  })
+  }) 
 }
 
 export { useTopicList }
