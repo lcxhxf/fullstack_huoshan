@@ -25,11 +25,15 @@
     "webpack-cli": "3.2.3",
     "webpack-dev-server": "^3.1.4",
     "@types/react": "^16.0.19",
+    "@types/react-route": "^4.0.30",
+    "@types/react-route-dom": "^4.3.0",
     "@types/react-dom": "^16.0.2"
   },
   "dependencies": {
     "bootstrap": "^4.1.1",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "react-route": "^4.3.1",
+    "react-route-dom": "^4.3.1"
   }
 }
