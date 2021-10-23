@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="nav">
+        <a href="/page1">page1</a>
+        <a href="/page2">page2</a>
+        <a href="/page3">page3</a>
+        <a href="/page4">page4</a>
+        <a href="/page5">page5</a>
+    </div>
+    <div class="container"></div>
+    <script>
+        class HistoryRouter {
+            constructor() {
+                this.routes = {};
+                this.listenLink();
+                this.listenPopState();
+            }
+            listenPopState() {
+                window.addEventListener('popstate', (e) => {
+                    let state = e.state || {},
+                    path = state.path || '';
+                    this.dealPathHandler(path);
+                })
+            }
+            listenLink() {
+                // let links = document.querySelectorAll('a');
+                // links.forEach((link) => {
+                //     link.addEventListenner('click', (e) => {
+                //         e.preventDefault();
+                //     })
+                // })
+                window.addEventListener('click', (e) => {
+                    let dom = e.target;
+                    if( dom.nodeName == 'A' && dom.getAttribute('href')) {
+                        e.preventDefault();
+                        this.assgin(dom.getElementById('href'))
+                    }
+                    console.log(e);
+                })
+            }
+            assgin(path) {
+                history.pushState({path}, null, path);
+                this.dealPathHandler(path);
+            }
+            register(path, callback=function() {}) {
+                this.routes[oath] = callback.bind(this);
+            }
+        }
+        const router = new HistoryRouter();
+        let container = document.getElementById('root');
+        router.register('/page1', () => container.innerHTML = '我是page1');
+        router.register('/page2', () => container.innerHTML = '我是page2');
+        router.register('/page3', () => container.innerHTML = '我是page3');
+    </script>
+</body>
+
+</html>

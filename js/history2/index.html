@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="nav">
+        <a href="#/page1">page1</a>
+        <a href="#/page2">page2</a>
+        <a href="#/page3">page3</a>
+    </div>
+    <div id="container"></div>
+    <script>
+        // window.addEventListener('hashchange', function(event) {
+        //     let newURL = event.newURL;
+        //     let oldURL = event.oldURL;
+        //     console.log(newURL, "=========",oldURL);
+        //     let route = newURL.split('#/')[1];
+        //     console.log(route);
+        // })
+        class HashRoute {
+            // 事件监听
+            // 配置 {  }
+            // key => val()
+            constructor() {        //构造方法
+                this.HashURLObj = {};  
+            }
+            register(hashUrl, fun) {
+                window.addEventListener('hashchange', (e) => {
+                    let newURL = e.newURL;
+                    let hashUrl = newURL.split('#')[1];
+                    const callback = this.HashURLObj[hashUrl]
+                    if (hashUrl && typeof callback == 'function') {
+                        callback();
+                    }
+                })
+                this.HashURLObj[hashUrl] = fun.bind(this); 
+            }
+        }
+        let router = new HashRoute() // 路由实例
+        let container = document.getElementById('container'); // 挂载点
+        router.register('/page1', () => container.innerHTML = '我是page1');
+        router.register('/page2', () => container.innerHTML = '我是page2');
+        router.register('/page3', () => container.innerHTML = '我是page3');
+    </script>
+</body>
+
+</html>
