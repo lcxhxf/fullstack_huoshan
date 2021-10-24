@@ -1,7 +1,9 @@
 <template>
   <router-view></router-view>
   <NavBar />
+  <div class=""></div>
 </template>
+
 <script>
 import NavBar from "./components/NavBar.vue";
 
