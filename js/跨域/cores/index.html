@@ -10,9 +10,14 @@
     <script>
         const url = 'http://localhost:3000';
         const data = { username: '格格' }
+        const myHeaders = new Headers({
+            'X-Custom-Header': 'XXX'
+        })
         fetch(url, {
             method: 'POST',
-            body: JSON.stringify(data)
+            body: JSON.stringify(data),
+            headers: myHeaders,
+            code: 'cors'
         })
             .then(res => res.json())
             .then(res => {
