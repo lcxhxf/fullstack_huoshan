@@ -1,14 +1,24 @@
-import Index from '../views/Index'
-import About from '../views/About'
+import Home from '@/views/Home'
+import Data from '@/views/Data'
+import User from '@/views/User'
+import Login from '@/views/Login'
 
 const routes = [
     {
         path: '/',
-        component: Index
+        component: Home
     },
     {
-        path: '/about',
-        component: About
+        path: '/data',
+        component: Data
     },
+    {
+        path: '/user',
+        component: User
+    },
+    {
+        path: '/login',
+        component: Login
+    }
 ]
 export default routes
