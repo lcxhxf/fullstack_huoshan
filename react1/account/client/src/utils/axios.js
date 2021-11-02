@@ -2,9 +2,10 @@ import axios from 'axios'
 import { Toast, Cell, Button, Icon } from 'zarm';
 
 // vite 中获取环境变量
-const Mode = import.mate.env.MODE  // 'development'
+const Mode = import.meta.env.MODE  // 'development'
 
 axios.defaults.baseURL = Mode === 'development' ? '/api' : ''
+console.log(axios.defaults.baseURL, '-----------');
 axios.defaults.withCredentials = true //请求是否携带凭证
 axios.defaults.headers['X-Requested-With'] = 'XMLHttpRequest'
 axios.defaults.headers['Authorization'] = `${localStorage.getItem('token') || null}`
@@ -26,4 +27,6 @@ axios.interceptors.response.use(res => {
 
     return res.data
 })
+
+export default axios
 

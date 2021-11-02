@@ -1,17 +1,86 @@
-function readTxt(delay, num) {
-    let pm = new Promise(function (resolve, reject) {
-        setTimeout(() => {
-            resolve(num);
-            console.log(num);
-        }, delay);
-    });
-    return pm;
-}
-
-async function fn() {
-    let num1 = await readTxt(1000, 1);
-    let num2 = await readTxt(100, 2);
-    let num3 = await readTxt(1000, 3);
-}
-
-console.log(fn());
+66
+77
+158
+21
+70
+0
+0
+0
+0
+0
+54
+0
+0
+0
+40
+0
+0
+0
+232
+3
+0
+0
+251
+5
+0
+0
+1
+0
+24
+0
+0
+0
+0
+0
+104
+21
+70
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+38
+34
+33
+44
+40
+39
+34
+30
+29
+28
+24
+23
+34
+30
+29
+30
+26
+25
+24
+20
+19
+33
+29
+28
+30
+26
+25
+28
+24
+23
+26
+22
