@@ -1,10 +1,10 @@
-import Home from '@/views/Home'
-import Data from '@/views/Data'
-import User from '@/views/User'
-import Login from '@/views/Login'
+import Home from '@/views/Home';
+import Data from '@/views/Data';
+import Me from '@/views/Me';
+import About from '../views/About';
+import Login from '../views/Login';
 
-const routes = [
-    {
+const routes = [{
         path: '/',
         component: Home
     },
@@ -14,11 +14,16 @@ const routes = [
     },
     {
         path: '/user',
-        component: User
+        component: Me
+    },
+    {
+        path: '/about',
+        component: About
     },
     {
         path: '/login',
         component: Login
     }
 ]
+
 export default routes

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from "react";
 
 const Data = () => {
-    return <div className="">统计</div>
+    return <div>统计</div>
 }
 
-export default Data
+export default Data;
