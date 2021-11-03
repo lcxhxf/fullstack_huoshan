@@ -28,6 +28,9 @@ module.exports = appInfo => {
       enable: false
     }
   }
+  config.jwt = {
+    secret: 'lc' 
+  }
 
   exports.mysql = {
     client: {

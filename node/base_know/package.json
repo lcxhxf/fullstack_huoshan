@@ -1,0 +1,16 @@
+{
+  "name": "base_know",
+  "version": "1.0.0",
+  "description": "- 1.js 可以在前端，后端都正常进行\r   - JS前端后端 相同点 单线程 event loop 机制\r   - node 的event loop 机制和前端不一样",
+  "main": "1.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node app.js",
+    "prod": "cross-env NODE_ENV=production node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
