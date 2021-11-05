@@ -50,8 +50,8 @@ class UserController extends Controller {
 
   }
 
-  async login () {
-    const {ctx} = this
+  async login() {
+    const { ctx, app } = this
     const { username, password } = ctx.request.body
     const userInfo = await ctx.service.user.getUserByName(username)
     if (!userInfo || !userInfo.id) {
@@ -60,23 +60,25 @@ class UserController extends Controller {
         msg: '账号不存在',
         data: null
       }
-      return
+      return 
     }
     console.log(userInfo);
-    if (userInfo && userInfo.password != password ) {
+    if (userInfo && userInfo.password != password) {
       ctx.body = {
         code: 500,
         msg: '密码错误',
         data: null
       }
-      return
+      return 
     }
     // 账号密码都对，给前端生成一个token标记
-    const token = app.jwt.sign({// jwt需要接受两个参数，第一个参数是对象，对象内为需要加密的内容，第二个参数是加密字符串
+    const token = app.jwt.sign({ // jwt.sign接受两个参数，第一个参数是对象，对象内为需要加密的内容，第二个参数是加密字符串
       id: userInfo.id,
       username: userInfo.username,
-      exp: Math.floor (Date.now / 1000) + (24 * 60 * 60)
+      exp: Math.floor(Date.now() / 1000) + (24 * 60 * 60)
     }, app.config.jwt.secret)
+
+    // console.log(token);
     ctx.body = {
       code: 200,
       msg: '登录成功',
@@ -84,7 +86,7 @@ class UserController extends Controller {
         token
       }
     }
-   }
+  }
 }
 
 module.exports = UserController

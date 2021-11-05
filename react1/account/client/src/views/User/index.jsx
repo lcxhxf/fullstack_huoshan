@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from "react";
 
 const User = () => {
-    return <div className="">我的</div>
+  return <div>我的</div>
 }
 
 export default User

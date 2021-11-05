@@ -28,8 +28,9 @@ module.exports = appInfo => {
       enable: false
     }
   }
+
   config.jwt = {
-    secret: 'lc' 
+    secret: 'woniu'
   }
 
   exports.mysql = {
