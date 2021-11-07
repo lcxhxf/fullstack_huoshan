@@ -11,7 +11,7 @@ class typeController extends Controller {
         if (!decode) return
         user_id = decode.id
         const list = await ctx.service.type.list(user_id)
-        console.log(list);
+        // console.log(list);
         ctx.body = {
             code: 200,
             msg: '请求成功',

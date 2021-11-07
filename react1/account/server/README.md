@@ -1,33 +1,10 @@
-# server
+# 部署
+- CentOS服务器
 
+<!--  非必须  -->
+- 配置ssh（网络安全协议） 
+1. 本地打开cmd使用命令 ssh-keygen -t rsa -C '2422635277@qq.com'先生成密钥
+2. 如何将C:\Users\86178\.ssh\id_rsa.pub里的内容复制到服务器/root/.ssh/authorized_keys里面
+好处：配置好服务器上的公钥，之后每次登录服务器，就不用输入登陆密码
 
-
-## QuickStart
-
-<!-- add docs here for user -->
-
-see [egg docs][egg] for more detail.
-
-### Development
-
-```bash
-$ npm i
-$ npm run dev
-$ open http://localhost:7001/
-```
-
-### Deploy
-
-```bash
-$ npm start
-$ npm stop
-```
-
-### npm scripts
-
-- Use `npm run lint` to check code style.
-- Use `npm test` to run unit test.
-- Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
-
-
-[egg]: https://eggjs.org
+- 
