@@ -1,0 +1,320 @@
+{
+  "keys": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\config\\config.default.js",
+  "middleware": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\config\\config.default.js",
+  "security": {
+    "csrf": {
+      "enable": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\config\\config.default.js",
+      "type": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "ignoreJSON": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "useSession": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "cookieName": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "sessionName": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "headerName": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "bodyName": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "queryName": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "refererWhiteList": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "domainWhiteList": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+    "protocolWhiteList": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+    "xframe": {
+      "enable": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "hsts": {
+      "enable": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.local.js",
+      "maxAge": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "includeSubdomains": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "dta": {
+      "enable": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "noopen": {
+      "enable": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "nosniff": {
+      "enable": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "xssProtection": {
+      "enable": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "csp": {
+      "enable": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "policy": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "ipExceptionList": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "checkAddress": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js"
+    }
+  },
+  "jwt": {
+    "secret": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\config\\config.default.js",
+    "enable": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-jwt\\config\\config.default.js"
+  },
+  "mysql": {
+    "client": {
+      "host": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\config\\config.default.js",
+      "port": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\config\\config.default.js",
+      "user": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\config\\config.default.js",
+      "password": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\config\\config.default.js",
+      "database": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\config\\config.default.js"
+    },
+    "app": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\config\\config.default.js",
+    "agent": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\config\\config.default.js",
+    "default": {
+      "database": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-mysql\\config\\config.default.js",
+      "connectionLimit": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-mysql\\config\\config.default.js"
+    }
+  },
+  "session": {
+    "maxAge": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-session\\config\\config.default.js",
+    "logValue": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-session\\config\\config.default.js"
+  },
+  "helper": {
+    "shtml": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-security\\config\\config.default.js"
+  },
+  "jsonp": {
+    "limit": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "callback": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "csrf": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-jsonp\\config\\config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-onerror\\config\\config.default.js",
+    "templatePath": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-onerror\\config\\config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-i18n\\config\\config.default.js",
+    "dirs": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-i18n\\config\\config.default.js",
+    "queryField": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieField": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieDomain": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-i18n\\config\\config.default.js"
+  },
+  "watcher": {
+    "type": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-watcher\\config\\config.local.js",
+    "eventSources": {
+      "default": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-watcher\\config\\config.default.js",
+      "development": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-watcher\\config\\config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-schedule\\config\\config.default.js",
+      "file": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-schedule\\config\\config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-schedule\\config\\config.default.js"
+  },
+  "multipart": {
+    "mode": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-multipart\\config\\config.default.js",
+    "autoFields": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-multipart\\config\\config.default.js",
+    "defaultCharset": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldSize": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fields": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileSize": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-multipart\\config\\config.default.js",
+    "files": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileExtensions": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-multipart\\config\\config.default.js",
+    "whitelist": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-multipart\\config\\config.default.js",
+    "allowArrayField": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-multipart\\config\\config.default.js",
+    "tmpdir": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-multipart\\config\\config.default.js",
+    "cleanSchedule": {
+      "cron": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-multipart\\config\\config.default.js",
+      "disable": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-multipart\\config\\config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-development\\config\\config.default.js",
+    "ignoreDirs": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-development\\config\\config.default.js",
+    "fastReady": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-development\\config\\config.default.js",
+    "reloadOnDebug": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideDefault": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideIgnore": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-development\\config\\config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFiles": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxDays": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-logrotator\\config\\config.default.js"
+  },
+  "static": {
+    "prefix": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-static\\config\\config.default.js",
+    "dir": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-static\\config\\config.default.js",
+    "dynamic": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-static\\config\\config.default.js",
+    "preload": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-static\\config\\config.default.js",
+    "buffer": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-static\\config\\config.default.js",
+    "maxFiles": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-static\\config\\config.default.js"
+  },
+  "view": {
+    "root": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-view\\config\\config.local.js",
+    "defaultExtension": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-view\\config\\config.default.js",
+    "defaultViewEngine": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-view\\config\\config.default.js",
+    "mapping": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg-view\\config\\config.default.js"
+  },
+  "env": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+  "name": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+  "cookies": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+  "proxy": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+  "maxIpsCount": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+  "maxProxyCount": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+  "protocolHeaders": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+  "ipHeaders": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+  "hostHeaders": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+  "pkg": {
+    "name": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "version": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "description": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "private": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "egg": {
+      "declarations": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "dependencies": {
+      "egg": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "egg-jwt": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "egg-mysql": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "egg-scripts": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "moment": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "devDependencies": {
+      "autod": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "autod-egg": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "egg-bin": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "egg-ci": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "egg-mock": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "eslint": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "eslint-config-egg": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "engines": {
+      "node": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "scripts": {
+      "start": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "stop": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "dev": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "debug": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "test": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "test-local": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "cov": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "lint": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "ci": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "autod": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "ci": {
+      "version": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "repository": {
+      "type": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "url": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "author": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "license": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "baseDir": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+  "HOME": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+  "rundir": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+  "dump": {
+    "ignore": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "notFound": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "sitefile": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "middlewares": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "httpClient": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "bodyParser": {
+    "enable": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "formLimit": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "jsonLimit": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "textLimit": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "strict": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "depth": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "parameterLimit": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "onerror": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "logger": {
+    "dir": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "env": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "level": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "consoleLevel": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "outputJSON": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "buffer": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "appLogName": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "coreLogName": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "agentLogName": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "errorLogName": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "coreLogger": {
+      "consoleLevel": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.local.js"
+    },
+    "allowDebugAtProd": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "request": {
+      "timeout": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "logging": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "coreMiddleware": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+  "workerStartTimeout": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+  "serverTimeout": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "port": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+      "hostname": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js",
+    "responseTimeout": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "onClientError": "D:\\lvmeng-workspace\\LESSON_HS__GIT\\fullstack_huoshan\\react1\\account\\server\\node_modules\\egg\\config\\config.default.js"
+}
