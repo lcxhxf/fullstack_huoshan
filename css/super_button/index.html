@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .button {
+    appearance: none;/*外表 不同的浏览器默认的不一样 
+    表单元素 button radio 重新设置下样式 不受浏览器默认行为的任何影响  */
+    position: relative;
+    background-color: #f72359;
+    padding: 1em 2em;/* 相对自身的字体大小的单位 */
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    display: inline-block;
+    cursor: pointer;
+    box-sizing: border-box;
+    outline: none;/* 轮廓 border border 是盒模型的一份子 
+      几种？ 
+      ie dom1 dom2
+      标准盒模型  width/height   
+      IE 盒模型
+    */
+    border-radius: 100px;
+    overflow: hidden;
+  }
+  .button:before {
+    /* 不适用js 去动态的修改  before 的位置
+      面试官 css 4 variable 很多人不会， 代码可读性不好的
+      --x 
+      js  设置 x  的值  
+    */
+    --size: 0; /*css next */
+    content: '';
+    position: absolute;
+    left: var(--x);
+    right:var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle closest-side, #4405f7, transparent);
+    transform: translate(-50%, -50%);
+    transition: width .2s ease, height .2s ease;
+    
+  }
+  .button:hover:before {
+    --size: 400px;
+  }
+  </style>
+</head>
+<body>
+  <div class="button">
+    Hover me I'am awesome
+  </div>
+  <script>
+      document.querySelector('.button')
+        // pageX 相对于页面的偏移
+        // css 用的少
+        .onmousemove = (e) => {
+            const x = e.pageX - e.target.offsetLeft;
+            const y = e.pageY - e.target.offsetTop;
+            e.target.style.setProperty('--x', `${x}px`);
+            e.target.style.setProperty('--y', `${y}px`);
+        }
+  </script>
+</body>
+</html>
