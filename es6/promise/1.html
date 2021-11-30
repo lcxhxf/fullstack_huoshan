@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let getUserInfo = function () {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => resolve('姓名：叶湘伦'),
+                Math.floor(random()*400))
+            })
+        }
+        let showUserInfo = function() {
+            return getUserInfo().then(info => {
+                console.log('用户信息',info);
+                return true
+            })
+        }
+    </script>
+</body>
+</html>
