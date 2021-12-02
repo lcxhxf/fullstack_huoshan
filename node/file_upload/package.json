@@ -1,0 +1,20 @@
+{
+  "name": "file_upload",
+  "version": "1.0.0",
+  "description": "node 上传文件\r 1. 流操作 fs.createReadStream\r    本地 读取流， 再在服务器 createWriteStream\r 2. 前端表单 要做什么处理\r    input设置为file类型 就会有一个change 事件 设置单文件还是多文件\r 3. 中间件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.4",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.1.1",
+    "koa-static": "^5.0.0",
+    "nodemon": "^2.0.15",
+    "tinify": "^1.6.1"
+  }
+}
