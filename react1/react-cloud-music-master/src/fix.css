@@ -11,5 +11,6 @@
       -webkit-transform: scaleY(0.33);
       transform: scaleY(0.33);
       color: rgb(151, 127, 127);
+      border: '1px solid #000';
   }
 }
