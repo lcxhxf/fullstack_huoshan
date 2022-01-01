@@ -1,0 +1,16 @@
+{
+  "name": "hook_ts_code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-ts": "^5.1.2",
+    "typescript": "^4.5.4"
+  }
+}
