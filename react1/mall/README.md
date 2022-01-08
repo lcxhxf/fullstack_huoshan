@@ -69,3 +69,14 @@ export default connect(mapStateToProps, {})(Server)
 - 金禅脱壳
     1. 把不想展示的功能直接截图， 放到assets下
     2. 切页面组件
+
+
+- 项目考点
+    1. 性能优化
+        路由 懒加载
+        组件memo
+        connect(mapStateToProps, {})(memo(My))
+        lazyload 图片
+    2. 样式组件
+    3. better-scroll
+    4. 组件化风格
