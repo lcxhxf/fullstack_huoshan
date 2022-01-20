@@ -1,23 +1,24 @@
 const Koa = require('koa')
 const views = require('koa-views')
-const bodyParser = require('koa-bodyparser') // 处理数据 post请求
-const PORT = process.env.PORT || 4000
-const InitManager = require('./src/core/init')
+const bodyParser = require('koa-bodyparser');
 const app = new Koa()
+const PORT = process.env.PORT || 4000;
+const InitManager = require('./src/core/init')
 
-// console.log(process.env);
-app.use(require('koa-static')(__dirname+'/public')) // 设置静态服务器
+app.use(require('koa-static')(__dirname + '/public'))
 app.use(
     bodyParser({
-        enableTypes: ['json', 'from','text']
+        enableTypes: ['json', 'form', 'text']
     })
 )
-app.use(views(__dirname + '/src/views'), { // ejs模板引擎
+app.use(views(__dirname + '/src/views', {
     extension: 'ejs'
-})
-// service abstract
+}))
+
+//service abstracet
 InitManager.initCore(app)
+//  InitManager这个对象有  initCore方法
 
 app.listen(PORT, () => {
-    console.log(`Koa is running on ${PORT}`);
+    console.log(`koa is running ${PORT}`)
 })
