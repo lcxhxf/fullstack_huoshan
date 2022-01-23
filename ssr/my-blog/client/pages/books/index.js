@@ -7,6 +7,7 @@ const Books = (props) => {
     return (
         <>
             <Row className="ww clearfix book-c">
+                
                 {
                     props?.res.map((item, index) => {
                         return (
